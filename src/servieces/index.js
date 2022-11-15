@@ -1,6 +1,7 @@
 import axios from "axios"
 
-const baseUrl="http://localhost:1000/"
+const baseUrl="https://booksratingnedb.herokuapp.com/"
+// const baseUrl="http://localhost:1000/"
     /**
      * *Fetching all books from DB
      * @returns promise of all books
