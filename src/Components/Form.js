@@ -10,7 +10,7 @@ function Form() {
     const { allRatedBookContextData, setBooks } = React.useContext(allRatedBooksContext)
 
     /**
-     * TODO: Book Submition
+     * * Book Submit
      * @params onClick Handler
      * @returns update allBook Context 
      */
@@ -28,7 +28,6 @@ function Form() {
             }
             let submitedData = await insertData(data)
             if (submitedData) {
-                console.log("submit data", submitedData)
                 const updatedContextData = allRatedBookContextData.push(submitedData);
                 setBooks(updatedContextData)
                 setName('')

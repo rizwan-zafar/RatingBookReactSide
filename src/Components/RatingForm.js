@@ -29,8 +29,7 @@ function RatingForm() {
             const topData = allBooks.filter((item) => {
                 return item.rating === 5;
             })
-            console.log("top Rating", topData)
-            console.log("total record", totalbooks)
+            
         }
 
 
