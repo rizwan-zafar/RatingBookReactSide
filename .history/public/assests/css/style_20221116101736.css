@@ -776,6 +776,6 @@ transition: width 0.6s ease;
 }
 .help p{
   text-align: justify;
-  font-size: 13px;
+    font-size: 13px;
 }
 }

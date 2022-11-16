@@ -61,9 +61,9 @@ function RatingForm() {
                             <div className="col-lg-4 offset-lg-2 col-md-5 offset-md-1"><br />
                                 <Form />
                             </div>
-                            <div className="col-md-5 col-lg-5 px-0">
+                            <div className="col-md-5 col-lg-5 px-0 progressBarsContainer">
                                 <div>
-                                    <h2>Customre Reviews <strong>Top Rated % Books</strong></h2>
+                                    <h2>Customer Reviews <strong>Top Rated % Books</strong></h2>
 
                                     {topRatedBooks ? topRatedBooks.map((book, key) => {
                                         return (<div key={key}>

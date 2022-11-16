@@ -770,12 +770,4 @@ transition: width 0.6s ease;
     position: relative;
     font-size: 12px;
 }
-.help  h1{
-  font-weight: bold;
-    font-size: 25px;
-}
-.help p{
-  text-align: justify;
-  font-size: 13px;
-}
 }

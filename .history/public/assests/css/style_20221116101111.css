@@ -765,17 +765,10 @@ transition: width 0.6s ease;
   }
 
   .nav_section .custom_nav2 .custom_nav-container .navbar-nav .nav-item .nav-link {
+    /* padding: 10px 30px; */
     color: #ffffff;
     text-align: center;
     position: relative;
     font-size: 12px;
-}
-.help  h1{
-  font-weight: bold;
-    font-size: 25px;
-}
-.help p{
-  text-align: justify;
-  font-size: 13px;
 }
 }

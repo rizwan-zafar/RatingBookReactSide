@@ -9,7 +9,7 @@ function MainPage() {
     <div>
       <FamousBook />
       <RatingFrom />
-      <Suspense
+     <Suspense
         fallback={
           <>
             <Loader />
@@ -17,8 +17,8 @@ function MainPage() {
         }
       >
         <Table />
-      </Suspense>
-      <Testimonial />
+      </Suspense> 
+      <Testimonial /> 
     </div>
   );
 }

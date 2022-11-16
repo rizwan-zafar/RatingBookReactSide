@@ -142,7 +142,7 @@ function Table() {
               <input
                 type="text"
                 className="form-control"
-                placeholder="Search with book name"
+                placeholder=""
                 aria-label="Username"
                 onChange={(e) => getData(e)}
                 aria-describedby="basic-addon1"

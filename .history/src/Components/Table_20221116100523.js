@@ -142,7 +142,7 @@ function Table() {
               <input
                 type="text"
                 className="form-control"
-                placeholder="Search with book name"
+                placeholder="Book"
                 aria-label="Username"
                 onChange={(e) => getData(e)}
                 aria-describedby="basic-addon1"
@@ -183,7 +183,7 @@ function Table() {
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Name</th>
+                <th scope="col">Full Name</th>
                 <th scope="col">Books</th>
                 <th scope="col" className="text-center">
                   Rating

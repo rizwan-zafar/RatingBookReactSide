@@ -23,7 +23,7 @@ function Help() {
     <>
        {allFaqs ? allFaqs.map((question, key) => {
         return (<div className="container help" style={{ marginTop: "10vh" }} key={key}>
-          <h1 > {key + 1}. {question.question} </h1>
+          <h1 > {key + 1}. {question.question}</strong></h1>
           <p>{question.answer}</p>
         </div>)
       }) : "Loading..."}

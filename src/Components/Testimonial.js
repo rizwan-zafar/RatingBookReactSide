@@ -42,7 +42,7 @@ function Testimonial() {
                         </h2>
                         <hr />
                     </div><br /><br /><br />
-                    <div className="container text-center">
+                    <div className="container text-center testimonialDescription">
                         <h1><strong>Read some reviews from our beloved clients about our work</strong></h1><br />
                         <p>Mayonity is trusted by multiple companies, universities and government agencies.</p>
                     </div>
