@@ -1,13 +1,14 @@
 import axios from "axios"
 
-
+const baseUrl="https://books-rating.up.railway.app/"
+// const baseUrl="http://localhost:1000/"
     /**
      * *Fetching all books from DB
      * @returns promise of all books
      */
     export const getAllRatedBooks = async () => {
     try{
-        const { data } = await axios.get('http://localhost:1000/books/api/v1')
+        const { data } = await axios.get(baseUrl+'books/api/v1')
         return data
     }
     catch(e)
@@ -26,7 +27,7 @@ import axios from "axios"
      */
     export async function SearchingBooks(e) {
     try{ 
-        const { data } = await axios.get('http://localhost:1000/books/api/v1/search/' + e.target.value)
+        const { data } = await axios.get(baseUrl+'books/api/v1/search/' + e.target.value)
         return data;
         }
         catch(e)
@@ -44,10 +45,10 @@ import axios from "axios"
      * @returns promise confirmation msg
      */
     export async function deleteDataService(_id) {
-        try {
+        try {   
             if (_id) {
 
-                const { data } = await axios.delete('http://localhost:1000/books/api/v1/' + _id)
+                const { data } = await axios.delete(baseUrl+'books/api/v1/' + _id)
                 return data;
             }
 
@@ -79,13 +80,13 @@ import axios from "axios"
         };
 
         try {
-            let res = await fetch("http://localhost:1000/books/api/v1", requestBody);
+            let res = await fetch(baseUrl+"books/api/v1", requestBody);
             let resJson = await res.json();
             if (res.status === 200) {
-                alert("Data Submited Successfully")
+                alert("Data Submitted Successfully")
                 return resJson;
             } else {
-                alert("Someting Went To Wrong")
+                alert("Something Went To Wrong")
             }
         } catch (err) {
             console.log("Error" + err);
@@ -114,14 +115,13 @@ import axios from "axios"
             })
         };
         try {
-            let res = await fetch("http://localhost:1000/books/api/v1/" + _id, requestBody);
+            let res = await fetch(baseUrl+"books/api/v1/" + _id, requestBody);
             let resJson = await res.json();
-            console.log("rejson", resJson)
-            if (res.status === 200) {
+             if (res.status === 200) {
                 alert("Data Updated Successfully")
                 return resJson;
             } else {
-                alert("Someting Went To Wrong")
+                alert("Something Went To Wrong")
             }
         } catch (err) {
             console.log("Error" + err);
@@ -129,3 +129,38 @@ import axios from "axios"
 
     }
 
+
+    // ContactUs Messages
+   /**
+     * *Insert Contact Message in DB
+     * @params Body 
+     * @returns promise confirmation msg
+     */
+    export async function insertContactUsMessage(data) {
+
+        const requestBody = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: data.name,
+                email: data.email,
+                phone: data.phone,
+                message: data.message,
+            })
+        };
+
+        try {
+            let res = await fetch(baseUrl+"contact/api/v1", requestBody);
+            let resJson = await res.json();
+            if (res.status === 200) {
+                alert("Message Received Successfully")
+                return resJson;
+            } else {
+                alert("Something Went To Wrong")
+            }
+        } catch (err) {
+            console.log("Error" + err);
+        }
+        console.log("iam insert data")
+
+    }

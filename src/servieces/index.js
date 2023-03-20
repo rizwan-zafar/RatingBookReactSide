@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const baseUrl="https://booksratingnedb.herokuapp.com/"
+const baseUrl="https://books-rating.up.railway.app/"
 // const baseUrl="http://localhost:1000/"
     /**
      * *Fetching all books from DB
